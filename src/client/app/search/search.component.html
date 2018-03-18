@@ -1,5 +1,37 @@
-<div class="container">
-    <mat-form-field>
-        <input type="text" matInput placeholder="search">
-    </mat-form-field>
+<div class="row">
+    <div class="col-sm-12">
+        <input id="search" type="text" matInput placeholder="search">
+    </div>
+</div>
+
+<div class="results">
+    <div class="row">
+        <div class="col-md-4 col-sm-6" *ngFor="let food of results | filter: search">
+            <div class="card border-dark mb-3">
+                <div class="card-header">
+                    <h6>{{ food.Title }}</h6>
+                </div>
+                <div class="card-body">
+                    <table>
+                        <tr>
+                            <td>Rating: </td>
+                            <td>5 *</td>
+                        </tr>
+                        <tr>
+                            <td>Author: </td>
+                            <td>{{ food.Author }}</td>
+                        </tr>
+                        <tr>
+                            <td>Source: </td>
+                            <td>{{ food.Source }}</td>
+                        </tr>
+                        <tr [style.visibility]="food.Page > -1 ? 'visible' : 'hidden'">
+                            <td>Page: </td>
+                            <td>{{ food.Page }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
