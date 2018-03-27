@@ -18,7 +18,7 @@ export class FoodService {
         'Page': 133
       },
       {
-        'Title': 'Panner spinach and onion wrap',
+        'Title': 'Paneer spinach and onion wrap',
         'Author': '',
         'Source': 'Indian Made Easy',
         'Page': 98
@@ -46,12 +46,6 @@ export class FoodService {
         'Author': 'Jamie Oliver',
         'Source': 'Superfoods',
         'Page': 194
-      },
-      {
-        'Title': 'Panner spinach and onion',
-        'Author': '',
-        'Source': 'Indian Made Easy',
-        'Page': 98
       },
       {
         'Title': 'Pepper and halloumi stew',
