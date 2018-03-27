@@ -14,7 +14,6 @@ export class SearchComponent implements OnInit {
   constructor(private foodService: FoodService) { }
 
   ngOnInit() {
-    this.results = this.foodService.getAllReceipes();
+    this.foodService.getAllReceipes().subscribe(data => this.results = data);
   }
-
 }

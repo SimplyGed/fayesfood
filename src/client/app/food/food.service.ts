@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxJs/Observable';
+import 'rxJs/add/observable/of';
 
 import { Recipe } from '../food/food.model';
 
@@ -7,8 +9,8 @@ export class FoodService {
 
   constructor() { }
 
-  getAllReceipes(): Array<Recipe> {
-    return [
+  getAllReceipes(): Observable<Recipe[]> {
+    const data: Recipe[] = [
       {
         'Title': 'Thai basil chicken',
         'Author': '',
@@ -64,5 +66,7 @@ export class FoodService {
         'Page': -1
       }
     ];
+
+    return Observable.of<Recipe[]>(data);
   }
 }
