@@ -1,18 +1,7 @@
-export class Receipe {
+export class Recipe {
 
     public Title: string;
-    public Created: Date;
-    public Rating: number;
-
+    public Author: string;
     public Source: string;
     public Page: number;
-    public MainIngredients: string[];
-
-    /**
-     *
-     */
-    constructor(title: string) {
-        this.Title = title;
-        this.Created = new Date(Date.now());
-    }
 }

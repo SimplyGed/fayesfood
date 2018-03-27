@@ -1,12 +1,12 @@
 <div class="row">
     <div class="col-sm-12">
-        <input id="search" type="text" matInput placeholder="search">
+        <input [(ngModel)]="searchText" id="search" type="text" matInput placeholder="search">
     </div>
 </div>
 
 <div class="results">
     <div class="row">
-        <div class="col-md-4 col-sm-6" *ngFor="let food of results | filter: search">
+        <div class="col-md-4 col-sm-6" *ngFor="let food of results | filter: searchText">
             <div class="card border-dark mb-3">
                 <div class="card-header">
                     <h6>{{ food.Title }}</h6>

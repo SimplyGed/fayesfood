@@ -15,7 +15,6 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
     this.results = this.foodService.getAllReceipes();
-    
   }
 
 }

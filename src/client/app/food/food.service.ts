@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 
+import { Recipe } from '../food/food.model';
+
 @Injectable()
 export class FoodService {
 
   constructor() { }
 
-  getAllReceipes(): Array<any> {
+  getAllReceipes(): Array<Recipe> {
     return [
       {
         'Title': 'Thai basil chicken',
