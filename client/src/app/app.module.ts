@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { JwtModule } from '@auth0/angular-jwt';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -11,6 +12,9 @@ import { StatsComponent } from './stats/stats.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { FilterPipe } from './search/filter.pipe';
 import { LoginComponent } from './login/login.component';
+import { HttpClient } from 'selenium-webdriver/http';
+import { UserService } from './users/user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,9 +29,23 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: getToken,
+        whitelistedDomains: ['localhost:3000'],
+        blacklistedRoutes: ['localhost:3000/auth/']
+      }
+    })
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function getToken() {
+  return localStorage.getItem('id_token');
+}
