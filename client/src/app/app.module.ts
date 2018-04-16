@@ -10,6 +10,7 @@ import { SearchComponent } from './search/search.component';
 import { StatsComponent } from './stats/stats.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { FilterPipe } from './search/filter.pipe';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FilterPipe } from './search/filter.pipe';
     SearchComponent,
     StatsComponent,
     TabsComponent,
-    FilterPipe
+    FilterPipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
