@@ -3,7 +3,12 @@
         <input [(ngModel)]="searchText" id="search" type="text" matInput placeholder="search">
     </div>
 </div>
-
+<div class="recipe-count">
+    <label>Showing </label>
+    <span>{{ (results | filter:searchText).length }}</span>
+    <label> of </label>
+    <span>{{ results.length }}</span>
+</div>
 <div class="results">
     <div class="row">
         <div class="col-md-4 col-sm-6" *ngFor="let food of results | filter: searchText">

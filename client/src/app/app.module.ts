@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { JwtModule } from '@auth0/angular-jwt';
+import { ChartModule } from 'angular-highcharts';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -15,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { HttpClient } from 'selenium-webdriver/http';
 import { UserService } from './users/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FoodService } from './food/food.service';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    ChartModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: getToken,
@@ -40,7 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     })
   ],
   providers: [
-    UserService
+    UserService,
+    FoodService
   ],
   bootstrap: [AppComponent]
 })

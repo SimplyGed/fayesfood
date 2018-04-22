@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
-import 'rxJs/add/operators/map';
+import { map } from 'rxJs/operators';
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxJs/observable/of';
 
 @Injectable()
 export class UserService {
@@ -8,18 +10,22 @@ export class UserService {
     constructor(private http: HttpClient) {
     }
 
-    fbLogin() {
-        this.http.get('//localhost:3000/auth/facebook')
-            .subscribe(
-                (success) => {
-                    console.log('success');
-                    console.log(success);
-                }
-            );
-    }
+    // fbLogin(): Observable<Object> {
+    //     return this.http.get('//localhost:3000/auth/facebook')
+    //         .subscribe(
+    //             (success) => {
+    //                 console.log('success');
+    //                 console.log(success);
+    //             }
+    //         );
+    // }
 
-    logout() {
-        localStorage.removeItem('id_token');
+    // logout() {
+    //     localStorage.removeItem('id_token');
+    // }
+
+    isLoggedIn(): Promise<boolean> {
+        return of(true).toPromise();
     }
 
     // isLoggedIn() {
