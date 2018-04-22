@@ -9,9 +9,9 @@ import { AnonymousGuard } from './users/anonymousguard.service';
 
 const routes: Routes = [
   { path: '', redirectTo: '/search', pathMatch: 'full' },
-  { path: 'search', component: SearchComponent, canActivate: [AuthGuard] },
-  { path: 'stats', component: StatsComponent, canActivate: [AuthGuard] },
-  { path: 'login', component: LoginComponent, canActivate: [AnonymousGuard] }
+  { path: 'search', component: SearchComponent }, // , canActivate: [AuthGuard] },
+  { path: 'stats', component: StatsComponent }, // , canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent }, // , canActivate: [AnonymousGuard] }
 ];
 
 @NgModule({
