@@ -237,8 +237,8 @@ export class FoodService {
       },
       {
         'Title': 'Spicy chipotle jackfruit tacos',
-        'Author': '',
-        'Source': '',
+        'Author': 'Richa Hingle',
+        'Link': 'http://www.veganricha.com/2015/09/spicy-chipotle-garlic-jackfruit-tacos.html',
         'Page': -1
       },
       {
@@ -286,7 +286,7 @@ export class FoodService {
       {
         'Title': 'Cod with parmentier potatoes',
         'Author': 'Sunday Brunch',
-        'Source': '',
+        'Link': 'http://www.channel4.com/programmes/sunday-brunch/articles/latest-recipes/cod-with-parmentier-potatoes-and-butter-sauce/5419',
         'Page': -1
       },
       {
@@ -340,7 +340,7 @@ export class FoodService {
       {
         'Title': 'Mushroom curry',
         'Author': 'Jamie Oliver',
-        'Source': '',
+        'Link': 'https://www.jamieoliver.com/recipes/vegetable-recipes/mushroom-curry/',
         'Page': -1
       },
       {
@@ -363,8 +363,8 @@ export class FoodService {
       },
       {
         'Title': 'Quorn spaghetti bolognese',
-        'Author': '',
-        'Source': '',
+        'Author': 'BBCFood Website',
+        'Link': 'https://www.bbcgoodfood.com/recipes/3028703/quorn-spaghetti-bolognese',
         'Page': -1
       },
       {

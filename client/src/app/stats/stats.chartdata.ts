@@ -1,4 +1,4 @@
-export class ByAuthor {
+export class ChartData {
     name: string;
     y: number;
 }

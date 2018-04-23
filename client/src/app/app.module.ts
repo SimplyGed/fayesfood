@@ -17,6 +17,10 @@ import { HttpClient } from 'selenium-webdriver/http';
 import { UserService } from './users/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FoodService } from './food/food.service';
+import { AuthorPieChartComponent } from './stats/author.piechart.component';
+import { AuthorBarChartComponent } from './stats/author.barchart.component';
+import { BookPieChartComponent } from './stats/book.piechart.component';
+import { BookBarChartComponent } from './stats/book.barchart.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { FoodService } from './food/food.service';
     StatsComponent,
     TabsComponent,
     FilterPipe,
-    LoginComponent
+    LoginComponent,
+    AuthorPieChartComponent,
+    AuthorBarChartComponent,
+    BookPieChartComponent,
+    BookBarChartComponent
   ],
   imports: [
     BrowserModule,
