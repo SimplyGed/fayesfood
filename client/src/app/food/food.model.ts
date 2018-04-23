@@ -4,4 +4,5 @@ export class Recipe {
     public Author: string;
     public Source: string;
     public Page: number;
+    public Link?: string;
 }

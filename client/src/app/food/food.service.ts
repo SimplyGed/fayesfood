@@ -86,7 +86,7 @@ export class FoodService {
       {
         'Title': 'Sprouting broccoli with sweet tahini',
         'Author': 'Yotam Ottolenghi',
-        'Source': 'Ottolenghi',
+        'Source': 'Plenty',
         'Page': 81
       },
       {
@@ -116,7 +116,7 @@ export class FoodService {
       {
         'Title': 'Squash with cardamom',
         'Author': 'Yotam Ottolenghi',
-        'Source': 'Ottolenghi',
+        'Source': 'Plenty',
         'Page': 172
       },
       {
@@ -157,8 +157,8 @@ export class FoodService {
       },
       {
         'Title': 'Saffron and rosemary chicken',
-        'Author': 'Persiana',
-        'Source': 'Sabrina Ghayour',
+        'Author': 'Sabrina Ghayour',
+        'Source': 'Persiana',
         'Page': 104
       },
       {
@@ -176,8 +176,9 @@ export class FoodService {
       {
         'Title': 'Veggie moussaka',
         'Author': 'Jamie Oliver',
-        'Source': 'http://www.jamieoliver.com/recipes/vegetables-recipes/beautiful-veggie-moussaka',
-        'Page': -1
+        'Source': 'Jamie Oliver Website',
+        'Page': -1,
+        'Link': '//www.jamieoliver.com/recipes/vegetables-recipes/beautiful-veggie-moussaka',
       },
       {
         'Title': 'Roasted mushroom soup',
@@ -188,19 +189,19 @@ export class FoodService {
       {
         'Title': 'Cauliflower, grape and cheddar salad',
         'Author': 'Yotam Ottolenghi',
-        'Source': 'Ottolenghi',
+        'Source': 'Plenty',
         'Page': 178
       },
       {
         'Title': 'Pea and mint croquettes',
         'Author': 'Yotam Ottolenghi',
-        'Source': 'Ottolenghi',
+        'Source': 'Plenty',
         'Page': 198
       },
       {
         'Title': 'Aubergine cheesecake',
         'Author': 'Yotam Ottolenghi',
-        'Source': 'Ottolenghi',
+        'Source': 'Plenty',
         'Page': 254
       },
       {
@@ -218,8 +219,9 @@ export class FoodService {
       {
         'Title': 'Quinoa salad with walnut and mango',
         'Author': 'Paul Rankin',
-        'Source': 'https://www.bbc.com/food/recipes/quinoasaladwithavoca_84148',
-        'Page': -1
+        'Source': 'BBCFood Website',
+        'Page': -1,
+        'Link': '//www.bbc.com/food/recipes/quinoasaladwithavoca_84148',
       },
       {
         'Title': 'Paneer stuffed peppers',
@@ -296,7 +298,7 @@ export class FoodService {
       {
         'Title': 'Mushroom pithivier',
         'Author': 'Yotam Ottolenghi',
-        'Source': 'Ottolenghi',
+        'Source': 'Plenty',
         'Page': 278
       },
       {
@@ -392,8 +394,9 @@ export class FoodService {
       {
         'Title': 'Potato soup',
         'Author': 'Darina Allen',
-        'Source': 'http://www.bbc.co.uk/food/recipes/potatosoup_11631',
-        'Page': -1
+        'Source': 'BBCFood Website',
+        'Page': -1,
+        'Link': '//www.bbc.co.uk/food/recipes/potatosoup_11631',
       }
     ];
 

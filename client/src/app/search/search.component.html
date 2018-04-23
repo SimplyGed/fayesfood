@@ -17,25 +17,23 @@
                     <h6>{{ food.Title }}</h6>
                 </div>
                 <div class="card-body">
-                    <table>
-                        <tr>
-                            <td>Rating: </td>
-                            <td>5 *</td>
-                        </tr>
-                        <tr>
-                            <td>Author: </td>
-                            <td>{{ food.Author }}</td>
-                        </tr>
-                        <tr>
-                            <td>Source: </td>
-                            <td>{{ food.Source }}</td>
-                        </tr>
-                        <tr [style.visibility]="food.Page > -1 ? 'visible' : 'hidden'">
-                            <td>Page: </td>
-                            <td>{{ food.Page }}</td>
-                        </tr>
-                    </table>
-                </div>
+                    <div>
+                        <label>Author: </label>
+                        <span>{{ food.Author }}</span>
+                    </div>
+                    <div>
+                        <label>Source: </label>
+                        <span>{{ food.Source }}</span>
+                    </div>
+                    <div *ngIf="food.Page > -1">
+                        <label>Page: </label>
+                        <span>{{ food.Page }}</span>
+                    </div>
+                    <div *ngIf="food.Link">
+                            <label>Link: </label>
+                            <span><a [href]="food.Link" target="_blank">Click here</a></span>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>

@@ -14,25 +14,16 @@ import { Subscription } from 'rxjs/Subscription';
   styleUrls: ['./stats.component.scss']
 })
 export class StatsComponent implements OnInit, OnDestroy {
-  options: any;
-  authors: Chart;
+  optionsPie: any;
+  authorsPie: Chart;
+
+  optionsBar: any;
+  authorsBar: Chart;
+
   receipeSubscription: Subscription;
 
-
-  data: ByAuthor[] = [{
-    name: 'Jamie Oliver',
-    y: 5
-  }, {
-    name: 'Gordon Ramsay',
-    y: 3
-  }, {
-    name: 'Anne Jones',
-    y: 11
-  }];
-
-
   constructor(private foodService: FoodService) {
-    this.options = {
+    this.optionsPie = {
       chart: {
         type: 'pie'
       },
@@ -41,6 +32,39 @@ export class StatsComponent implements OnInit, OnDestroy {
       },
       credits: {
         enabled: false
+      },
+      series: [{
+        name: 'Recipes',
+        data: {}
+      }]
+    };
+
+    this.optionsBar = {
+      chart: {
+        type: 'column'
+      },
+      title: {
+        text: null
+      },
+      xAxis: {
+        type: 'category'
+      },
+      yAxis: {
+        title: {
+          text: '# Recipes'
+        }
+      },
+      credits: {
+        enabled: false
+      },
+      legend: {
+        enabled: false
+      },
+      plotOptions: {
+        column: {
+          groupPadding: 0,
+          shadow: false
+        }
       },
       series: [{
         name: 'Recipes',
@@ -61,9 +85,12 @@ export class StatsComponent implements OnInit, OnDestroy {
           return arr;
         }, new Array<ByAuthor>());
 
-        this.options.series[0].data = list;
+        this.optionsPie.series[0].data = list;
 
-        this.authors = new Chart(this.options);
+        this.optionsBar.series[0].data = list.sort((a, b) => b.y - a.y);
+
+        this.authorsPie = new Chart(this.optionsPie);
+        this.authorsBar = new Chart(this.optionsBar);
       });
   }
 
