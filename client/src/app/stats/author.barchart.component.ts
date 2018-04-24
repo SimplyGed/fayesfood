@@ -55,27 +55,27 @@ export class AuthorBarChartComponent implements OnInit {
             author.y += 1;
 
             return arr;
-          }, new Array<ChartData>());
+        }, new Array<ChartData>());
 
-          this.optionsBar.series[0].data = list.sort((a, b) => b.y - a.y);
+        this.optionsBar.series[0].data = list.sort((a, b) => b.y - a.y);
 
-          this.authorsBar = new Chart(this.optionsBar);
+        this.authorsBar = new Chart(this.optionsBar);
     }
 
     private createOrFindAuthor(array: ChartData[], recipe: Recipe): ChartData {
         const name = (recipe.Author.length > 0 ? recipe.Author : 'UNKNOWN');
-    
+
         let found = array.find(i => i.name === name);
-    
+
         if (!found) {
-          const newData = new ChartData();
-          newData.name = name;
-          newData.y = 0;
-          array.push(newData);
-    
-          found = newData;
+            const newData = new ChartData();
+            newData.name = name;
+            newData.y = 0;
+            array.push(newData);
+
+            found = newData;
         }
-    
+
         return found;
-      }
+    }
 }

@@ -9,12 +9,12 @@ import { ChartData } from './stats.chartdata';
 })
 export class BookPieChartComponent implements OnInit {
     @Input() recipes: Recipe[];
-    
+
     private booksPie: Chart;
     private optionsPie: any;
-    
+
     constructor() {
-        
+
         this.optionsPie = {
             chart: {
                 type: 'pie'
@@ -46,7 +46,7 @@ export class BookPieChartComponent implements OnInit {
     }
 
     private createOrFindBook(array: ChartData[], recipe: Recipe): ChartData {
-        const name = (recipe.Link ? "WEB" : recipe.Source);
+        const name = (recipe.Link ? 'WEB' : recipe.Source);
 
         let found = array.find(i => i.name === name);
 

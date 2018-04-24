@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FoodService } from '../food/food.service';
 import { Recipe } from '../food/food.model';
 
@@ -7,7 +7,7 @@ import { Recipe } from '../food/food.model';
   templateUrl: './stats.component.html',
   styleUrls: ['./stats.component.scss']
 })
-export class StatsComponent implements OnInit, OnDestroy {
+export class StatsComponent implements OnInit {
 
   recipes: Recipe[];
 
@@ -21,10 +21,6 @@ export class StatsComponent implements OnInit, OnDestroy {
         data => {
           this.recipes = data;
         });
-  }
-
-  ngOnDestroy(): void {
-    // this.receipeSubscription.unsubscribe();
   }
 
   // .pipe(
