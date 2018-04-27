@@ -3,10 +3,4 @@
         <input [(ngModel)]="searchText" id="search" type="text" matInput placeholder="search">
     </div>
 </div>
-<div class="recipe-count">
-    <label>Showing </label>
-    <span>{{ ((recipes$ | async) | filter:searchText).length }}</span>
-    <label> of </label>
-    <span>{{ ((recipes$ | async) ? (recipes$ | async).length : 0) }}</span>
-</div>
 <ff-recipes [recipes]="recipes$ | async" [searchText]="searchText"></ff-recipes>

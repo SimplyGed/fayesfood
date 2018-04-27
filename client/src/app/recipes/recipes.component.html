@@ -1,3 +1,10 @@
+<div class="recipe-count">
+    <label>Showing </label>
+    <span>{{ (recipes | filter:searchText).length }}</span>
+    <label> of </label>
+    <span>{{ recipes?.length }}</span>
+</div>
+
 <div class="results">
   <div class="row">
     <div class="col-md-4 col-sm-6" *ngFor="let food of recipes | filter: searchText">

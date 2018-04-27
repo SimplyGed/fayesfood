@@ -1,0 +1,26 @@
+.results {
+    margin-top: 10px;
+}
+
+.card {
+    border-radius: 0;
+}
+
+.card-header {
+    height: 70px;
+}
+
+.card-body {
+    padding: 10px 20px;
+    overflow: hidden;
+
+    label {
+        width: 55px;
+        margin-bottom: 0;
+    }
+
+    span {
+        white-space: nowrap;
+        word-wrap: none;
+    }
+}
