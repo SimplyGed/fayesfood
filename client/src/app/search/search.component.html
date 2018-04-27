@@ -5,36 +5,8 @@
 </div>
 <div class="recipe-count">
     <label>Showing </label>
-    <span>{{ ((results$ | async) | filter:searchText).length }}</span>
+    <span>{{ ((recipes$ | async) | filter:searchText).length }}</span>
     <label> of </label>
-    <span>{{ ((results$ | async) ? (results$ | async).length : 0) }}</span>
+    <span>{{ ((recipes$ | async) ? (recipes$ | async).length : 0) }}</span>
 </div>
-<div class="results">
-    <div class="row">
-        <div class="col-md-4 col-sm-6" *ngFor="let food of (results$ | async) | filter: searchText">
-            <div class="card border-dark mb-3">
-                <div class="card-header">
-                    <h6>{{ food.Title }}</h6>
-                </div>
-                <div class="card-body">
-                    <div>
-                        <label>Author: </label>
-                        <span>{{ food.Author }}</span>
-                    </div>
-                    <div>
-                        <label>Source: </label>
-                        <span>{{ food.Source }}</span>
-                    </div>
-                    <div *ngIf="food.Page > -1">
-                        <label>Page: </label>
-                        <span>{{ food.Page }}</span>
-                    </div>
-                    <div *ngIf="food.Link">
-                            <label>Link: </label>
-                            <span><a [href]="food.Link" target="_blank">Click here</a></span>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </div>
-</div>
+<ff-recipes [recipes]="recipes$ | async" [searchText]="searchText"></ff-recipes>

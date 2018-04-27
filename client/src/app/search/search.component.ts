@@ -12,11 +12,11 @@ import { Observable } from 'rxjs/Observable';
   providers: [FoodService]
 })
 export class SearchComponent implements OnInit {
-  public results$: Observable<Recipe[]>;
+  public recipes$: Observable<Recipe[]>;
 
   constructor(private foodService: FoodService) { }
 
   ngOnInit() {
-    this.results$ = this.foodService.getAllReceipes();
+    this.recipes$ = this.foodService.getAllReceipes();
   }
 }

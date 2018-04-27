@@ -21,6 +21,7 @@ import { AuthorPieChartComponent } from './stats/author.piechart.component';
 import { AuthorBarChartComponent } from './stats/author.barchart.component';
 import { BookPieChartComponent } from './stats/book.piechart.component';
 import { BookBarChartComponent } from './stats/book.barchart.component';
+import { RecipesComponent } from './recipes/recipes.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { BookBarChartComponent } from './stats/book.barchart.component';
     AuthorPieChartComponent,
     AuthorBarChartComponent,
     BookPieChartComponent,
-    BookBarChartComponent
+    BookBarChartComponent,
+    RecipesComponent
   ],
   imports: [
     BrowserModule,
