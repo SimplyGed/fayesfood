@@ -1,14 +1,17 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Recipe } from '../food/food.model';
 import { Chart } from 'angular-highcharts';
 import { ChartData } from './stats.chartdata';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
     selector: 'ff-book-piechart',
     templateUrl: 'book.piechart.component.html'
 })
-export class BookPieChartComponent implements OnInit {
-    @Input() recipes: Recipe[];
+export class BookPieChartComponent implements OnInit, OnChanges {
+    @Input() recipes: Observable<Recipe[]>;
+    @Input() title: string;
+    @Input() series: string;
 
     private booksPie: Chart;
     private optionsPie: any;
@@ -20,7 +23,7 @@ export class BookPieChartComponent implements OnInit {
                 type: 'pie'
             },
             title: {
-                text: 'Recipes By Book'
+                text: 'not set'
             },
             credits: {
                 enabled: false
@@ -33,7 +36,19 @@ export class BookPieChartComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        const list = this.recipes.reduce((arr: ChartData[], v: Recipe) => {
+        this.optionsPie.title.text = this.title;
+        this.optionsPie.series[0].name = this.series;
+    }
+
+    ngOnChanges(): void {
+        const list = this.recipes
+            .subscribe(
+                data => this.createData(data)
+        );
+    }
+
+    private createData(data): void {
+        const list = data.reduce((arr: ChartData[], v: Recipe) => {
             const author = this.createOrFindBook(arr, v);
             author.y += 1;
 

@@ -1,14 +1,17 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Recipe } from '../food/food.model';
 import { Chart } from 'angular-highcharts';
 import { ChartData } from './stats.chartdata';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
     selector: 'ff-author-barchart',
     templateUrl: 'author.barchart.component.html'
 })
-export class AuthorBarChartComponent implements OnInit {
-    @Input() recipes: Recipe[];
+export class AuthorBarChartComponent implements OnInit, OnChanges {
+    @Input() recipes: Observable<Recipe[]>;
+    @Input() title: string;
+    @Input() series: string;
 
     private authorsBar: Chart;
     private optionsBar: any;
@@ -27,8 +30,9 @@ export class AuthorBarChartComponent implements OnInit {
             },
             yAxis: {
                 title: {
-                    text: '# Recipes'
-                }
+                    text: 'not set'
+                },
+                tickInterval: 2
             },
             credits: {
                 enabled: false
@@ -43,14 +47,26 @@ export class AuthorBarChartComponent implements OnInit {
                 }
             },
             series: [{
-                name: 'Recipes',
+                name: 'not set',
                 data: {}
             }]
         };
     }
 
     ngOnInit(): void {
-        const list = this.recipes.reduce((arr: ChartData[], v: Recipe) => {
+        this.optionsBar.yAxis.title = this.title;
+        this.optionsBar.series[0].name = this.series;
+    }
+
+    ngOnChanges(): void {
+        const list = this.recipes
+            .subscribe(
+                data => this.createData(data)
+            );
+    }
+
+    private createData(data): void {
+        const list = data.reduce((arr: ChartData[], v: Recipe) => {
             const author = this.createOrFindAuthor(arr, v);
             author.y += 1;
 

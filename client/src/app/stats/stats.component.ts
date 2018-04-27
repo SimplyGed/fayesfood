@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FoodService } from '../food/food.service';
 import { Recipe } from '../food/food.model';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'ff-stats',
@@ -9,18 +10,14 @@ import { Recipe } from '../food/food.model';
 })
 export class StatsComponent implements OnInit {
 
-  recipes: Recipe[];
+  recipes$: Observable<Recipe[]>;
 
   constructor(private foodService: FoodService) {
   }
 
   ngOnInit() {
 
-    this.foodService.getAllReceipes()
-      .subscribe(
-        data => {
-          this.recipes = data;
-        });
+    this.recipes$ = this.foodService.getAllReceipes();
   }
 
   // .pipe(

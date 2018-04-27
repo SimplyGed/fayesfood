@@ -13,7 +13,7 @@ export class FoodService {
 
   getAllReceipes(): Observable<Recipe[]> {
     console.log('getAllrecipes');
-    return this.http.get<Recipe[]>('http://localhost:3000/api/recipe')
+    return this.http.get<Recipe[]>('/api/recipe')
     .pipe(
       publishLast(),
       refCount()
