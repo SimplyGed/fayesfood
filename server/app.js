@@ -6,11 +6,13 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
-var indexRouter = require('./routes/index');
 var fs = require('fs');
 
-var facebookRouter = require('./auth/facebook');
+var database = require('./database/config');
 
+// var facebookRouter = require('./auth/facebook');
+var indexRouter = require('./routes/index');
+const databaseRouter = require('./routes/database');
 
 var app = express();
 
@@ -19,8 +21,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+app.use(function(req,res,next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', '*');
+  res.header('Access-Control-Allow-Methods', '*');
+  next();
+});
+
 app.use('/', indexRouter);
-app.use('/auth', facebookRouter);
+app.use('/api', databaseRouter);
+
+// app.use('/auth', facebookRouter);
 
 // 404 - NotFound
 app.use(function(req, res, next) {
@@ -42,13 +53,13 @@ app.use(function(err, req, res, next) {
 
 var port = process.env.PORT || 3000;
 
-const options = {
-  key: fs.readFileSync('./certs/server.key'),
-  cert: fs.readFileSync('./certs/server.crt')
-};
+// const options = {
+//   key: fs.readFileSync('./certs/server.key'),
+//   cert: fs.readFileSync('./certs/server.crt')
+// };
 
-https.createServer(options, app).listen(port);
+// https.createServer(options, app).listen(port);
 
-// app.listen(port, () => console.log(`Listening on port ${port}`));
+app.listen(port, () => console.log(`Listening on port ${port}`));
 
 module.exports = app;

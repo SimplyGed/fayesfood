@@ -5,13 +5,13 @@
 </div>
 <div class="recipe-count">
     <label>Showing </label>
-    <span>{{ (results | filter:searchText).length }}</span>
+    <span>{{ ((results$ | async) | filter:searchText).length }}</span>
     <label> of </label>
-    <span>{{ results.length }}</span>
+    <span>{{ ((results$ | async) ? (results$ | async).length : 0) }}</span>
 </div>
 <div class="results">
     <div class="row">
-        <div class="col-md-4 col-sm-6" *ngFor="let food of results | filter: searchText">
+        <div class="col-md-4 col-sm-6" *ngFor="let food of (results$ | async) | filter: searchText">
             <div class="card border-dark mb-3">
                 <div class="card-header">
                     <h6>{{ food.Title }}</h6>
