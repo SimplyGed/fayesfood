@@ -17,10 +17,12 @@ import { HttpClient } from 'selenium-webdriver/http';
 import { UserService } from './users/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FoodService } from './food/food.service';
-import { AuthorPieChartComponent } from './stats/author.piechart.component';
-import { AuthorBarChartComponent } from './stats/author.barchart.component';
-import { BookPieChartComponent } from './stats/book.piechart.component';
-import { BookBarChartComponent } from './stats/book.barchart.component';
+import { AuthorPieChartComponent } from './stats/author/author.piechart.component';
+import { AuthorBarChartComponent } from './stats/author/author.barchart.component';
+import { AuthorStatsComponent } from './stats/author/author.stats.component';
+import { BookPieChartComponent } from './stats/book/book.piechart.component';
+import { BookBarChartComponent } from './stats/book/book.barchart.component';
+import { BookStatsComponent } from './stats/book/book.stats.component';
 import { RecipesComponent } from './recipes/recipes.component';
 
 @NgModule({
@@ -34,8 +36,10 @@ import { RecipesComponent } from './recipes/recipes.component';
     LoginComponent,
     AuthorPieChartComponent,
     AuthorBarChartComponent,
+    AuthorStatsComponent,
     BookPieChartComponent,
     BookBarChartComponent,
+    BookStatsComponent,
     RecipesComponent
   ],
   imports: [

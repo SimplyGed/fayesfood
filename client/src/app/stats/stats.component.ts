@@ -1,24 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { FoodService } from '../food/food.service';
-import { Recipe } from '../food/food.model';
-import { Observable } from 'rxjs/Observable';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'ff-stats',
   templateUrl: './stats.component.html',
   styleUrls: ['./stats.component.scss']
 })
-export class StatsComponent implements OnInit {
+export class StatsComponent {
 
-  recipes$: Observable<Recipe[]>;
-
-  constructor(private foodService: FoodService) {
-  }
-
-  ngOnInit() {
-
-    this.recipes$ = this.foodService.getAllReceipes();
-  }
+  constructor() {}
 
   // .pipe(
   //   reduce((arr: ByAuthor[], v: Recipe) =>
