@@ -4,6 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { FoodService } from '../../food/food.service';
 import { Recipe } from '../../food/food.model';
 import { of } from 'rxJs/observable/of';
+import { reduce, switchMap, map } from 'rxJs/operators';
 
 @Component({
   selector: 'ff-book-stats',
@@ -18,16 +19,19 @@ export class BookStatsComponent implements OnInit {
 
   ngOnInit(): void {
     this.foodService.getAllReceipes()
-      .subscribe((data) => {
-        const list = data.reduce((arr: ChartData[], v: Recipe) => {
-          const author = this.createOrFindBook(arr, v);
-          author.y += 1;
+      .pipe(
+        switchMap(data => data as Recipe[]),
 
-          return arr;
-        }, new Array<ChartData>());
+        reduce((arr: ChartData[], value: Recipe) => {
+            const author = this.createOrFindBook(arr, value);
+            author.y += 1;
 
-        this.chartData$ = of(list.sort((a, b) => b.y - a.y));
-      });
+            return arr;
+          }, new Array<ChartData>()),
+
+        map(data => this.chartData$ = of(data.sort((a, b) => b.y - a.y)))
+      )
+      .subscribe();
   }
 
   private createOrFindBook(array: ChartData[], recipe: Recipe): ChartData {
