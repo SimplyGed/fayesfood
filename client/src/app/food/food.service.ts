@@ -12,7 +12,6 @@ export class FoodService {
   constructor(private http: HttpClient) { }
 
   getAllReceipes(): Observable<Recipe[]> {
-    console.log('getAllrecipes');
     return this.http.get<Recipe[]>('/api/recipe')
     .pipe(
       publishLast(),
