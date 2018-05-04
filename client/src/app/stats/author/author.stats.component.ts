@@ -3,7 +3,7 @@ import { Recipe } from '../../food/food.model';
 import { ChartData } from '../stats.chartdata';
 import { FoodService } from '../../food/food.service';
 import { Observable } from 'rxjs/Observable';
-import { reduce, map, flatMap, switchMap } from 'rxJs/operators';
+import { reduce, map, switchMap } from 'rxJs/operators';
 import { of } from 'rxJs/observable/of';
 
 @Component({
@@ -21,7 +21,9 @@ export class AuthorStatsComponent implements OnInit {
       .pipe(
         switchMap(data => data as Recipe[]),
 
-        reduce((array: ChartData[], value: Recipe) => {
+        map(data => data.Author),
+
+        reduce((array: ChartData[], value: string) => {
             const author = this.createOrFindAuthor(array, value);
             author.y += 1;
 
@@ -33,15 +35,13 @@ export class AuthorStatsComponent implements OnInit {
       .subscribe();
   }
 
-  private createOrFindAuthor(array: ChartData[], recipe: Recipe): ChartData {
-    const name = (recipe.Author.length > 0 ? recipe.Author : 'UNKNOWN');
+  private createOrFindAuthor(array: ChartData[], value: string): ChartData {
+    const name = (value.length > 0 ? value : 'UNKNOWN');
 
     let found = array.find(i => i.name === name);
 
     if (!found) {
-      const newData = new ChartData();
-      newData.name = name;
-      newData.y = 0;
+      const newData = { name: name, y: 0 };
       array.push(newData);
 
       found = newData;

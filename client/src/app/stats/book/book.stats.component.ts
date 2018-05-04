@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import { FoodService } from '../../food/food.service';
 import { Recipe } from '../../food/food.model';
 import { of } from 'rxJs/observable/of';
-import { reduce, switchMap, map } from 'rxJs/operators';
+import { reduce, switchMap } from 'rxJs/operators';
 
 @Component({
   selector: 'ff-book-stats',
@@ -29,7 +29,7 @@ export class BookStatsComponent implements OnInit {
             return arr;
           }, new Array<ChartData>()),
 
-        map(data => this.chartData$ = of(data.sort((a, b) => b.y - a.y)))
+        switchMap(data => this.chartData$ = of(data.sort((a, b) => b.y - a.y)))
       )
       .subscribe();
   }
@@ -40,11 +40,8 @@ export class BookStatsComponent implements OnInit {
     let found = array.find(i => i.name === name);
 
     if (!found) {
-      const newData = new ChartData();
-      newData.name = name;
-      newData.y = 0;
+      const newData = { name: name, y: 0 };
       array.push(newData);
-
       found = newData;
     }
 
