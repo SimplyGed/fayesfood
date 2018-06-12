@@ -1,0 +1,13 @@
+D:\dev\fayesfood\MvcServer\MvcServer\bin\Debug\netcoreapp2.1\MvcServer.deps.json
+D:\dev\fayesfood\MvcServer\MvcServer\bin\Debug\netcoreapp2.1\MvcServer.runtimeconfig.json
+D:\dev\fayesfood\MvcServer\MvcServer\bin\Debug\netcoreapp2.1\MvcServer.runtimeconfig.dev.json
+D:\dev\fayesfood\MvcServer\MvcServer\bin\Debug\netcoreapp2.1\MvcServer.dll
+D:\dev\fayesfood\MvcServer\MvcServer\obj\Debug\netcoreapp2.1\MvcServer.csproj.CoreCompileInputs.cache
+D:\dev\fayesfood\MvcServer\MvcServer\obj\Debug\netcoreapp2.1\MvcServer.AssemblyInfoInputs.cache
+D:\dev\fayesfood\MvcServer\MvcServer\obj\Debug\netcoreapp2.1\MvcServer.AssemblyInfo.cs
+D:\dev\fayesfood\MvcServer\MvcServer\obj\Debug\netcoreapp2.1\MvcServer.RazorAssemblyInfo.cache
+D:\dev\fayesfood\MvcServer\MvcServer\obj\Debug\netcoreapp2.1\MvcServer.RazorAssemblyInfo.cs
+D:\dev\fayesfood\MvcServer\MvcServer\obj\Debug\netcoreapp2.1\MvcServer.RazorTargetAssemblyInfo.cache
+D:\dev\fayesfood\MvcServer\MvcServer\bin\Debug\netcoreapp2.1\MvcServer.pdb
+D:\dev\fayesfood\MvcServer\MvcServer\obj\Debug\netcoreapp2.1\MvcServer.dll
+D:\dev\fayesfood\MvcServer\MvcServer\obj\Debug\netcoreapp2.1\MvcServer.pdb

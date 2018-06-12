@@ -1,7 +1,10 @@
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
-var mongoDB = 'mongodb://localhost/fayesfood';
-mongoose.connect(mongoDB)
+var settings = require('./settings');
+
+mongoose.connect(settings.database)
     .then(() => console.log('connected to db'))
     .catch((error) => console.log(`failed to connect to databse: ${error}`));
+
+// require("./init.js");

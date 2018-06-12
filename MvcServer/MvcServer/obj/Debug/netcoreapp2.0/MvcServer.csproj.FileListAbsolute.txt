@@ -1,0 +1,11 @@
+D:\dev\fayesfood\MvcServer\MvcServer\bin\Debug\netcoreapp2.0\MvcServer.deps.json
+D:\dev\fayesfood\MvcServer\MvcServer\bin\Debug\netcoreapp2.0\MvcServer.runtimeconfig.json
+D:\dev\fayesfood\MvcServer\MvcServer\bin\Debug\netcoreapp2.0\MvcServer.runtimeconfig.dev.json
+D:\dev\fayesfood\MvcServer\MvcServer\bin\Debug\netcoreapp2.0\MvcServer.dll
+D:\dev\fayesfood\MvcServer\MvcServer\obj\Debug\netcoreapp2.0\MvcServer.csprojAssemblyReference.cache
+D:\dev\fayesfood\MvcServer\MvcServer\obj\Debug\netcoreapp2.0\MvcServer.csproj.CoreCompileInputs.cache
+D:\dev\fayesfood\MvcServer\MvcServer\obj\Debug\netcoreapp2.0\MvcServer.AssemblyInfoInputs.cache
+D:\dev\fayesfood\MvcServer\MvcServer\obj\Debug\netcoreapp2.0\MvcServer.AssemblyInfo.cs
+D:\dev\fayesfood\MvcServer\MvcServer\bin\Debug\netcoreapp2.0\MvcServer.pdb
+D:\dev\fayesfood\MvcServer\MvcServer\obj\Debug\netcoreapp2.0\MvcServer.dll
+D:\dev\fayesfood\MvcServer\MvcServer\obj\Debug\netcoreapp2.0\MvcServer.pdb
