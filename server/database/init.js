@@ -2,499 +2,496 @@ const Recipe = require('./recipe');
 
 const recipes = [
   {
-    'Id': 1,
-    'Title': 'Thai basil chicken',
-    'Author': 'Kate Percy',
-    'Source': 'Go Faster',
-    'Page': -1
+    'id': 1,
+    'title': 'Thai basil chicken',
+    'author': 'Kate Percy',
+    'source': 'Go Faster',
+    'page': -1
   },
   {
-    'Id': 2,
-    'Title': 'Paneer spinach and onion wrap',
-    'Author': 'Anjum Anand',
-    'Source': 'Indian Made Easy',
-    'Page': 98
+    'id': 2,
+    'title': 'Paneer spinach and onion wrap',
+    'author': 'Anjum Anand',
+    'source': 'Indian Made Easy',
+    'page': 98
   },
   {
-    'Id': 3,
-    'Title': 'Stuffed chicken and parma ham',
-    'Author': 'Gordon Ramsay',
-    'Source': 'Healthy',
-    'Page': -1
+    'id': 3,
+    'title': 'Stuffed chicken and parma ham',
+    'author': 'Gordon Ramsay',
+    'source': 'Healthy',
+    'page': -1
   },
   {
-    'Id': 4,
-    'Title': 'Risotto with fennel and ricotta',
-    'Author': 'Jamie Oliver',
-    'Source': 'Jamie\'s Italy',
-    'Page': 145
+    'id': 4,
+    'title': 'Risotto with fennel and ricotta',
+    'author': 'Jamie Oliver',
+    'source': 'Jamie\'s Italy',
+    'page': 145
   },
   {
-    'Id': 5,
-    'Title': 'Tumeric chicken kebabs',
-    'Author': 'Rick Stein',
-    'Source': 'Far Eastern Odyssey',
-    'Page': 66
+    'id': 5,
+    'title': 'Tumeric chicken kebabs',
+    'author': 'Rick Stein',
+    'source': 'Far Eastern Odyssey',
+    'page': 66
   },
   {
-    'Id': 6,
-    'Title': 'Cod with crust',
-    'Author': 'Jamie Oliver',
-    'Source': 'Superfoods',
-    'Page': 184
+    'id': 6,
+    'title': 'Cod with crust',
+    'author': 'Jamie Oliver',
+    'source': 'Superfoods',
+    'page': 184
   },
   {
-    'Id': 7,
-    'Title': 'Lentil bolognese',
-    'Author': 'Nigel Slater',
-    'Source': 'Eat',
-    'Page': 183
+    'id': 7,
+    'title': 'Lentil bolognese',
+    'author': 'Nigel Slater',
+    'source': 'Eat',
+    'page': 183
   },
   {
-    'Id': 8,
-    'Title': 'Paneer Curry',
-    'Author': 'Anjum Anand',
-    'Source': 'Indian Made Easy',
-    'Page': 98
+    'id': 8,
+    'title': 'Paneer Curry',
+    'author': 'Anjum Anand',
+    'source': 'Indian Made Easy',
+    'page': 98
   },
   {
-    'Id': 9,
-    'Title': 'Chicken with peas, mint and asparagus',
-    'Author': 'Jamie Oliver',
-    'Source': 'Superfoods',
-    'Page': 162
+    'id': 9,
+    'title': 'Chicken with peas, mint and asparagus',
+    'author': 'Jamie Oliver',
+    'source': 'Superfoods',
+    'page': 162
   },
   {
-    'Id': 10,
-    'Title': 'Cripsy beef and veg',
-    'Author': 'The Hairy Bikers',
-    'Source': 'Asian Bikers',
-    'Page': 20
+    'id': 10,
+    'title': 'Cripsy beef and veg',
+    'author': 'The Hairy Bikers',
+    'source': 'Asian Bikers',
+    'page': 20
   },
   {
-    'Id': 11,
-    'Title': 'Carrot and squash salad',
-    'Author': 'Jamie Oliver',
-    'Source': 'Superfoods',
-    'Page': 194
+    'id': 11,
+    'title': 'Carrot and squash salad',
+    'author': 'Jamie Oliver',
+    'source': 'Superfoods',
+    'page': 194
   },
   {
-    'Id': 12,
-    'Title': 'Gnocchi with pea, ham and mushroom ',
-    'Author': 'Gordon Ramsay',
-    'Source': 'Ultimate Cookery Course',
-    'Page': 150
+    'id': 12,
+    'title': 'Gnocchi with pea, ham and mushroom ',
+    'author': 'Gordon Ramsay',
+    'source': 'Ultimate Cookery Course',
+    'page': 150
   },
   {
-    'Id': 13,
-    'Title': 'Sprouting broccoli with sweet tahini',
-    'Author': 'Yotam Ottolenghi',
-    'Source': 'Plenty',
-    'Page': 81
+    'id': 13,
+    'title': 'Sprouting broccoli with sweet tahini',
+    'author': 'Yotam Ottolenghi',
+    'source': 'Plenty',
+    'page': 81
   },
   {
-    'Id': 14,
-    'Title': 'Marinated kale salad',
-    'Author': 'Ella Woodward',
-    'Source': 'Deliciously Ella',
-    'Page': 153
+    'id': 14,
+    'title': 'Marinated kale salad',
+    'author': 'Ella Woodward',
+    'source': 'Deliciously Ella',
+    'page': 153
   },
   {
-    'Id': 15,
-    'Title': 'Easy roast veggies',
-    'Author': 'Ella Woodward',
-    'Source': 'Delciously Ella',
-    'Page': 128
+    'id': 15,
+    'title': 'Easy roast veggies',
+    'author': 'Ella Woodward',
+    'source': 'Delciously Ella',
+    'page': 128
   },
   {
-    'Id': 16,
-    'Title': 'Stuffed chestnut mushrooms',
-    'Author': 'Ella Woodward',
-    'Source': 'Deliciously Ella',
-    'Page': 150
+    'id': 16,
+    'title': 'Stuffed chestnut mushrooms',
+    'author': 'Ella Woodward',
+    'source': 'Deliciously Ella',
+    'page': 150
   },
   {
-    'Id': 17,
-    'Title': 'Tomato risotto',
-    'Author': 'Theo Randall',
-    'Source': 'Theo\'s Italian',
-    'Page': 105
+    'id': 17,
+    'title': 'Tomato risotto',
+    'author': 'Theo Randall',
+    'source': 'Theo\'s Italian',
+    'page': 105
   },
   {
-    'Id': 18,
-    'Title': 'Squash with cardamom',
-    'Author': 'Yotam Ottolenghi',
-    'Source': 'Plenty',
-    'Page': 172
+    'id': 18,
+    'title': 'Squash with cardamom',
+    'author': 'Yotam Ottolenghi',
+    'source': 'Plenty',
+    'page': 172
   },
   {
-    'Id': 19,
-    'Title': 'Herb ricotta cakes',
-    'Author': 'Nigel Slater',
-    'Source': 'Eat',
-    'Page': 149
+    'id': 19,
+    'title': 'Herb ricotta cakes',
+    'author': 'Nigel Slater',
+    'source': 'Eat',
+    'page': 149
   },
   {
-    'Id': 20,
-    'Title': 'Parsnip rosti',
-    'Author': 'Nigel Slater',
-    'Source': 'Eat',
-    'Page': 111
+    'id': 20,
+    'title': 'Parsnip rosti',
+    'author': 'Nigel Slater',
+    'source': 'Eat',
+    'page': 111
   },
   {
-    'Id': 21,
-    'Title': 'Spelt, basil and ricotta cakes',
-    'Author': 'Nigel Slater',
-    'Source': 'Eat',
-    'Page': 131
+    'id': 21,
+    'title': 'Spelt, basil and ricotta cakes',
+    'author': 'Nigel Slater',
+    'source': 'Eat',
+    'page': 131
   },
   {
-    'Id': 22,
-    'Title': 'Pepper and halloumi stew',
-    'Author': 'Anna Jones',
-    'Source': 'A Modern way to eat',
-    'Page': 87
+    'id': 22,
+    'title': 'Pepper and halloumi stew',
+    'author': 'Anna Jones',
+    'source': 'A Modern way to eat',
+    'page': 87
   },
   {
-    'Id': 23,
-    'Title': 'Asparagus soup',
-    'Author': 'Jamie Oliver',
-    'Source': 'Jamie At Home',
-    'Page': -1
+    'id': 23,
+    'title': 'Asparagus soup',
+    'author': 'Jamie Oliver',
+    'source': 'Jamie At Home',
+    'page': -1
   },
   {
-    'Id': 24,
-    'Title': 'Herb rolls',
-    'Author': 'Nigel Slater',
-    'Source': 'Eat',
-    'Page': 15
+    'id': 24,
+    'title': 'Herb rolls',
+    'author': 'Nigel Slater',
+    'source': 'Eat',
+    'page': 15
   },
   {
-    'Id': 25,
-    'Title': 'Saffron and rosemary chicken',
-    'Author': 'Sabrina Ghayour',
-    'Source': 'Persiana',
-    'Page': 104
+    'id': 25,
+    'title': 'Saffron and rosemary chicken',
+    'author': 'Sabrina Ghayour',
+    'source': 'Persiana',
+    'page': 104
   },
   {
-    'Id': 26,
-    'Title': 'Cumin and honey roasted carrots',
-    'Author': 'Sabrina Ghayour',
-    'Source': 'Persiana',
-    'Page': 191
+    'id': 26,
+    'title': 'Cumin and honey roasted carrots',
+    'author': 'Sabrina Ghayour',
+    'source': 'Persiana',
+    'page': 191
   },
   {
-    'Id': 27,
-    'Title': 'Butternut squash with pesto and feta',
-    'Author': 'Sabrina Ghayour',
-    'Source': 'Persiana',
-    'Page': 198
+    'id': 27,
+    'title': 'Butternut squash with pesto and feta',
+    'author': 'Sabrina Ghayour',
+    'source': 'Persiana',
+    'page': 198
   },
   {
-    'Id': 28,
-    'Title': 'Veggie moussaka',
-    'Author': 'Jamie Oliver',
-    'Source': 'Jamie Oliver Website',
-    'Page': -1,
-    'Link': '//www.jamieoliver.com/recipes/vegetables-recipes/beautiful-veggie-moussaka',
+    'id': 28,
+    'title': 'Veggie moussaka',
+    'author': 'Jamie Oliver',
+    'source': 'Jamie Oliver Website',
+    'page': -1,
+    'link': '//www.jamieoliver.com/recipes/vegetables-recipes/beautiful-veggie-moussaka',
   },
   {
-    'Id': 29,
-    'Title': 'Roasted mushroom soup',
-    'Author': 'Hugh Fearnley-Whittingstall',
-    'Source': 'Light and easy',
-    'Page': 126
+    'id': 29,
+    'title': 'Roasted mushroom soup',
+    'author': 'Hugh Fearnley-Whittingstall',
+    'source': 'Light and easy',
+    'page': 126
   },
   {
-    'Id': 30,
-    'Title': 'Cauliflower, grape and cheddar salad',
-    'Author': 'Yotam Ottolenghi',
-    'Source': 'Plenty',
-    'Page': 178
+    'id': 30,
+    'title': 'Cauliflower, grape and cheddar salad',
+    'author': 'Yotam Ottolenghi',
+    'source': 'Plenty',
+    'page': 178
   },
   {
-    'Id': 31,
-    'Title': 'Pea and mint croquettes',
-    'Author': 'Yotam Ottolenghi',
-    'Source': 'Plenty',
-    'Page': 198
+    'id': 31,
+    'title': 'Pea and mint croquettes',
+    'author': 'Yotam Ottolenghi',
+    'source': 'Plenty',
+    'page': 198
   },
   {
-    'Id': 32,
-    'Title': 'Aubergine cheesecake',
-    'Author': 'Yotam Ottolenghi',
-    'Source': 'Plenty',
-    'Page': 254
+    'id': 32,
+    'title': 'Aubergine cheesecake',
+    'author': 'Yotam Ottolenghi',
+    'source': 'Plenty',
+    'page': 254
   },
   {
-    'Id': 33,
-    'Title': 'Squash, red onion and butter bean roast',
-    'Author': 'Hugh Fearnley-Whittingstall',
-    'Source': 'Light and Easy',
-    'Page': 302
+    'id': 33,
+    'title': 'Squash, red onion and butter bean roast',
+    'author': 'Hugh Fearnley-Whittingstall',
+    'source': 'Light and Easy',
+    'page': 302
   },
   {
-    'Id': 34,
-    'Title': 'Beetroot curry',
-    'Author': 'Jackie Kearney',
-    'Source': 'Vegan Street Food',
-    'Page': 87
+    'id': 34,
+    'title': 'Beetroot curry',
+    'author': 'Jackie Kearney',
+    'source': 'Vegan Street Food',
+    'page': 87
   },
   {
-    'Id': 35,
-    'Title': 'Quinoa salad with walnut and mango',
-    'Author': 'Paul Rankin',
-    'Source': 'BBCFood Website',
-    'Page': -1,
-    'Link': '//www.bbc.com/food/recipes/quinoasaladwithavoca_84148',
+    'id': 35,
+    'title': 'Quinoa salad with walnut and mango',
+    'author': 'Paul Rankin',
+    'source': 'BBCFood Website',
+    'page': -1,
+    'link': '//www.bbc.com/food/recipes/quinoasaladwithavoca_84148',
   },
   {
-    'Id': 36,
-    'Title': 'Paneer stuffed peppers',
-    'Author': 'Meera Sodha',
-    'Source': 'Fresh India',
-    'Page': 161
+    'id': 36,
+    'title': 'Paneer stuffed peppers',
+    'author': 'Meera Sodha',
+    'source': 'Fresh India',
+    'page': 161
   },
   {
-    'Id': 37,
-    'Title': 'Spicy mushroom and broccoli noodles',
-    'Author': '',
-    'Source': 'One Note',
-    'Page': -1
+    'id': 37,
+    'title': 'Spicy mushroom and broccoli noodles',
+    'author': '',
+    'source': 'One Note',
+    'page': -1
   },
   {
-    'Id': 38,
-    'Title': 'Spicy chipotle jackfruit tacos',
-    'Author': 'Richa Hingle',
-    'Source': 'Vegan Richa Website',
-    'Link': 'http://www.veganricha.com/2015/09/spicy-chipotle-garlic-jackfruit-tacos.html',
-    'Page': -1
+    'id': 38,
+    'title': 'Spicy chipotle jackfruit tacos',
+    'author': 'Richa Hingle',
+    'source': 'Vegan Richa Website',
+    'link': 'http://www.veganricha.com/2015/09/spicy-chipotle-garlic-jackfruit-tacos.html',
+    'page': -1
   },
   {
-    'Id': 39,
-    'Title': 'Gnocchi with spinach',
-    'Author': 'Theo Randall',
-    'Source': 'Theo\'s Italian',
-    'Page': 95
+    'id': 39,
+    'title': 'Gnocchi with spinach',
+    'author': 'Theo Randall',
+    'source': 'Theo\'s Italian',
+    'page': 95
   },
   {
-    'Id': 40,
-    'Title': 'Fish tacos with kiwi salsa',
-    'Author': 'Jamie Oliver',
-    'Source': 'Superfoods',
-    'Page': 86
+    'id': 40,
+    'title': 'Fish tacos with kiwi salsa',
+    'author': 'Jamie Oliver',
+    'source': 'Superfoods',
+    'page': 86
   },
   {
-    'Id': 41,
-    'Title': 'Baked spring rolls',
-    'Author': 'Jackie Kearney',
-    'Source': 'Vegan Street Food',
-    'Page': 177
+    'id': 41,
+    'title': 'Baked spring rolls',
+    'author': 'Jackie Kearney',
+    'source': 'Vegan Street Food',
+    'page': 177
   },
   {
-    'Id': 42,
-    'Title': 'Spicy fried roti with veg',
-    'Author': 'Jackie Kearney',
-    'Source': 'Vegan Street Food',
-    'Page': 82
+    'id': 42,
+    'title': 'Spicy fried roti with veg',
+    'author': 'Jackie Kearney',
+    'source': 'Vegan Street Food',
+    'page': 82
   },
   {
-    'Id': 43,
-    'Title': 'Maple peanut California wraps',
-    'Author': 'Anna Jones',
-    'Source': 'A Modern Way To Eat',
-    'Page': 60
+    'id': 43,
+    'title': 'Maple peanut California wraps',
+    'author': 'Anna Jones',
+    'source': 'A Modern Way To Eat',
+    'page': 60
   },
   {
-    'Id': 44,
-    'Title': 'Cauliflower korma',
-    'Author': 'Meera Sodha',
-    'Source': 'Fresh India',
-    'Page': 68
+    'id': 44,
+    'title': 'Cauliflower korma',
+    'author': 'Meera Sodha',
+    'source': 'Fresh India',
+    'page': 68
   },
   {
-    'Id': 45,
-    'Title': 'Carrot, sweetcorn and elderflower soup',
-    'Author': 'New Covent Garden Soup Company',
-    'Source': 'Soup For Everyday',
-    'Page': 204
+    'id': 45,
+    'title': 'Carrot, sweetcorn and elderflower soup',
+    'author': 'New Covent Garden Soup Company',
+    'source': 'Soup For Everyday',
+    'page': 204
   },
   {
-    'Id': 46,
-    'Title': 'Cod with parmentier potatoes',
-    'Author': 'Sunday Brunch',
-    'Source': 'Channel 4 Website',
-    'Link': 'http://www.channel4.com/programmes/sunday-brunch/articles/latest-recipes/cod-with-parmentier-potatoes-and-butter-sauce/5419',
-    'Page': -1
+    'id': 46,
+    'title': 'Cod with parmentier potatoes',
+    'author': 'Sunday Brunch',
+    'source': 'Channel 4 Website',
+    'link': 'http://www.channel4.com/programmes/sunday-brunch/articles/latest-recipes/cod-with-parmentier-potatoes-and-butter-sauce/5419',
+    'page': -1
   },
   {
-    'Id': 47,
-    'Title': 'Squash, avocado and rocket salad',
-    'Author': 'Ella Woodward',
-    'Source': 'Deliciously Ella',
-    'Page': 145
+    'id': 47,
+    'title': 'Squash, avocado and rocket salad',
+    'author': 'Ella Woodward',
+    'source': 'Deliciously Ella',
+    'page': 145
   },
   {
-    'Id': 48,
-    'Title': 'Mushroom pithivier',
-    'Author': 'Yotam Ottolenghi',
-    'Source': 'Plenty',
-    'Page': 278
+    'id': 48,
+    'title': 'Mushroom pithivier',
+    'author': 'Yotam Ottolenghi',
+    'source': 'Plenty',
+    'page': 278
   },
   {
-    'Id': 49,
-    'Title': 'Mango paneer skewers',
-    'Author': 'Meera Sodha',
-    'Source': 'Fresh Indian',
-    'Page': 158
+    'id': 49,
+    'title': 'Mango paneer skewers',
+    'author': 'Meera Sodha',
+    'source': 'Fresh Indian',
+    'page': 158
   },
   {
-    'Id': 50,
-    'Title': 'Butternut squash and parmesan soup',
-    'Author': 'New Covent Garden Soup Company',
-    'Source': 'Soup For Everyday',
-    'Page': 293
+    'id': 50,
+    'title': 'Butternut squash and parmesan soup',
+    'author': 'New Covent Garden Soup Company',
+    'source': 'Soup For Everyday',
+    'page': 293
   },
   {
-    'Id': 51,
-    'Title': 'Broccoli cheddar and wild rice',
-    'Author': '',
-    'Source': 'One Note',
-    'Page': -1
+    'id': 51,
+    'title': 'Broccoli cheddar and wild rice',
+    'author': '',
+    'source': 'One Note',
+    'page': -1
   },
   {
-    'Id': 52,
-    'Title': 'Spinach soup with rosemary',
-    'Author': '',
-    'Source': 'One Note',
-    'Page': -1
+    'id': 52,
+    'title': 'Spinach soup with rosemary',
+    'author': '',
+    'source': 'One Note',
+    'page': -1
   },
   {
-    'Id': 53,
-    'Title': 'Butternut squash and kale tart',
-    'Author': 'Anna Jones',
-    'Source': 'A Modern Way To Eat',
-    'Page': 189
+    'id': 53,
+    'title': 'Butternut squash and kale tart',
+    'author': 'Anna Jones',
+    'source': 'A Modern Way To Eat',
+    'page': 189
   },
   {
-    'Id': 54,
-    'Title': 'Smoky mushroom frittata',
-    'Author': 'Jamie Oliver',
-    'Source': '5 Ingredients',
-    'Page': 93
+    'id': 54,
+    'title': 'Smoky mushroom frittata',
+    'author': 'Jamie Oliver',
+    'source': '5 Ingredients',
+    'page': 93
   },
   {
-    'Id': 55,
-    'Title': 'Mushroom curry',
-    'Author': 'Jamie Oliver',
-    'Source': 'Jamie Oliver Website',
-    'Link': 'https://www.jamieoliver.com/recipes/vegetable-recipes/mushroom-curry/',
-    'Page': -1
+    'id': 55,
+    'title': 'Mushroom curry',
+    'author': 'Jamie Oliver',
+    'source': 'Jamie Oliver Website',
+    'link': 'https://www.jamieoliver.com/recipes/vegetable-recipes/mushroom-curry/',
+    'page': -1
   },
   {
-    'Id': 56,
-    'Title': 'Edamame, bean and pea soup',
-    'Author': 'Gordon Ramsay',
-    'Source': 'Ultimate Fit Food',
-    'Page': 150
+    'id': 56,
+    'title': 'Edamame, bean and pea soup',
+    'author': 'Gordon Ramsay',
+    'source': 'Ultimate Fit Food',
+    'page': 150
   },
   {
-    'Id': 57,
-    'Title': 'Miso cod',
-    'Author': 'Gordon Ramsay',
-    'Source': 'Ultimate Fit Food',
-    'Page': 64
+    'id': 57,
+    'title': 'Miso cod',
+    'author': 'Gordon Ramsay',
+    'source': 'Ultimate Fit Food',
+    'page': 64
   },
   {
-    'Id': 58,
-    'Title': 'Malaysian chicken satay',
-    'Author': '',
-    'Source': 'One Note',
-    'Page': -1
+    'id': 58,
+    'title': 'Malaysian chicken satay',
+    'author': '',
+    'source': 'One Note',
+    'page': -1
   },
   {
-    'Id': 59,
-    'Title': 'Quorn spaghetti bolognese',
-    'Author': '',
-    'Source': 'BBCFood Website',
-    'Link': 'https://www.bbcgoodfood.com/recipes/3028703/quorn-spaghetti-bolognese',
-    'Page': -1
+    'id': 59,
+    'title': 'Quorn spaghetti bolognese',
+    'author': '',
+    'source': 'BBCFood Website',
+    'link': 'https://www.bbcgoodfood.com/recipes/3028703/quorn-spaghetti-bolognese',
+    'page': -1
   },
   {
-    'Id': 60,
-    'Title': 'Harissa squash salad',
-    'Author': 'Jamie Oliver',
-    'Source': '5 Ingredients',
-    'Page': 20
+    'id': 60,
+    'title': 'Harissa squash salad',
+    'author': 'Jamie Oliver',
+    'source': '5 Ingredients',
+    'page': 20
   },
   {
-    'Id': 61,
-    'Title': 'Pancetta cod',
-    'Author': 'Jamie Oliver',
-    'Source': '5 Ingredients',
-    'Page': 142
+    'id': 61,
+    'title': 'Pancetta cod',
+    'author': 'Jamie Oliver',
+    'source': '5 Ingredients',
+    'page': 142
   },
   {
-    'Id': 62,
-    'Title': 'Cripsy garlic chicken',
-    'Author': 'Jamie Oliver',
-    'Source': '5 Ingredients',
-    'Page': 108
+    'id': 62,
+    'title': 'Cripsy garlic chicken',
+    'author': 'Jamie Oliver',
+    'source': '5 Ingredients',
+    'page': 108
   },
   {
-    'Id': 63,
-    'Title': 'Corn and spring onion pancakes',
-    'Author': 'Yotam Ottolenghi',
-    'Source': 'Plenty',
-    'Page': 262
+    'id': 63,
+    'title': 'Corn and spring onion pancakes',
+    'author': 'Yotam Ottolenghi',
+    'source': 'Plenty',
+    'page': 262
   },
   // {
-  //   'Id': 0,
-  //   'Title': '',
-  //   'Author': '',
-  //   'Source': '',
-  //   'Page': -1
+  //   'id': 0,
+  //   'title': '',
+  //   'author': '',
+  //   'source': '',
+  //   'page': -1
   // },
   {
-    'Id': 64,
-    'Title': 'Potato soup',
-    'Author': 'Darina Allen',
-    'Source': 'BBCFood Website',
-    'Page': -1,
-    'Link': '//www.bbc.co.uk/food/recipes/potatosoup_11631',
+    'id': 64,
+    'title': 'Potato soup',
+    'author': 'Darina Allen',
+    'source': 'BBCFood Website',
+    'page': -1,
+    'link': '//www.bbc.co.uk/food/recipes/potatosoup_11631',
   }
 ];
 
 function init() {
-  recipes.forEach(r => {
+  for (var i = 0; i < recipes.length; ++i) {
 
-    if (!find(r.Id)) {
-      let newRecipe = new Recipe(r);
-      newRecipe.save((err, recipe) => {
-        if (err) {
-          console.log(`Could not save [${r.Id}]`);
-          console.log(err);
-        } else {
-          console.log(`Saved ${r.Id} - ${r.Title}`);
-        }
-      })
-    } else {
-      console.log(`Recipe ${r.Id} already exists`);
-    }
-  });
+    const r = recipes[i];
 
-  function find(id) {
-    Recipe.find({ Id: id }, (err, recipe) => {
+    Recipe.findOne({ 'id': r.id }, (err, found) => {
       if (err) {
-        console.log(`Cound not find [${id}] - ${err}`);
-        return false;
+        console.log(err);
+        return;
       }
 
-      console.log(`Found recipe ${id} (${recipe})`)
-      return recipe !== undefined;
+      let recipe = found;
+      if (!recipe) {
+        console.log(`Creating new Recipe ${r.id}`);
+        recipe = new Recipe(r);
+      }
+
+      recipe.save((err, recipe) => {
+        if (err) {
+          console.log(`Could not save [${this.id}]`);
+          console.log(err);
+        } else {
+          console.log(`Saved ${recipe.id} - ${recipe.title}`);
+        }
+      });
     });
   }
+}
 
-};
-
-module.exports = init;
+module.exports.init = init;

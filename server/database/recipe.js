@@ -9,4 +9,4 @@ var recipeSchema = mongoose.Schema({
     link: { type: String, required: false }
 });
 
-module.exports = mongoose.model('Recipe', recipeSchema);
+module.exports = mongoose.model('recipe', recipeSchema);
