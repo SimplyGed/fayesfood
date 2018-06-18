@@ -6,7 +6,7 @@ const recipes = [
     'title': 'Thai basil chicken',
     'author': 'Kate Percy',
     'source': 'Go Faster',
-    'page': -1
+    'page': 68
   },
   {
     'id': 2,
@@ -476,20 +476,33 @@ function init() {
         return;
       }
 
-      let recipe = found;
-      if (!recipe) {
+      if (found) {
+        console.log(`Updating ${found.id}`);
+        const changes = new Recipe(r);
+        changes._id = found._id;
+        
+        Recipe.update({ id: found.id }, changes, (err, updated) => {
+          if (err) {
+            console.log(`Could not update [${found.id}]`);
+            console.log(err);
+          } else {
+            console.log(updated);
+            console.log(`Updated ${updated.id}`);
+          }
+        });
+      } else {
         console.log(`Creating new Recipe ${r.id}`);
-        recipe = new Recipe(r);
-      }
+        const recipe = new Recipe(r);
 
-      recipe.save((err, recipe) => {
-        if (err) {
-          console.log(`Could not save [${this.id}]`);
-          console.log(err);
-        } else {
-          console.log(`Saved ${recipe.id} - ${recipe.title}`);
-        }
-      });
+        recipe.save((err, recipe) => {
+          if (err) {
+            console.log(`Could not save [${this.id}]`);
+            console.log(err);
+          } else {
+            console.log(`Saved ${recipe.id} - ${recipe.title}`);
+          }
+        });
+      }
     });
   }
 }
